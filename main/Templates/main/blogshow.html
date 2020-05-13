@@ -1,0 +1,13 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+{% for v in Video %}
+<div class="container">
+    <p></p>
+    <video class="responsive-video" controls width="853" height="480">
+        <source src="media/{{v.videofile}}" type="video/mp4">
+    </video>
+</div>
+<p></p>
+{% endfor %}
+{% endblock %}

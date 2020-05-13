@@ -1,0 +1,15 @@
+{% extends "main/header.html" %}
+{% load static %}
+{% block content %}
+   
+   <div>
+   <link rel="stylesheet" type="text/css" href="{% static 'main/css/util.css' %}">
+   
+   <form method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn" type="submit">register</button>
+   </form>
+   </div>
+{% endblock %}
+

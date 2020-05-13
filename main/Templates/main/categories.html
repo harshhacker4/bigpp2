@@ -1,0 +1,30 @@
+{% extends "main/header.html" %}
+{% block content %}
+<p></p>
+<p></p>
+<br>
+    
+    <div class="row">
+        {% for tut, partone in part_ones.items %}
+        
+          <div class="col l12 s12 m7">
+        
+              <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+                <div class="card-image">
+                  <img class="responsive-img" src="media/{{tut.Simage}}" style="width:20px">
+                </div>
+                <div class="card-content black-text">
+                  <br><span class="card-title"><strong>{{tut.Stitle}}</strong></span>
+                  <p style="color:black;">{{tut.Sdetails|safe}}</p>
+                </div>
+                <div class="card-action right-align">
+                  <a href="{{partone}}" class="waves-effect waves-light btn" style="color:#000000; background-color:#FFD166" >View More</a><a class="btn tooltipped" data-position="bottom" data-tooltip="Go here, if there are connection issues">Video</a>
+                  
+                </div>
+              </div>
+ 
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

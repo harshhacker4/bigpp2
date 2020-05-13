@@ -1,0 +1,55 @@
+<div class="navbar-fixed">  
+    <nav class="navfeature", style="background-color:#003F72">
+        <div class="container nav-wrapper">
+          <a href="#" class="sidenav-trigger" data-target="mobile-links"><i class="material-icons">menu</i></a>      
+          
+                            
+          
+            {% if user.is_authenticated %}
+            <a href="/" class="waves-effect waves-light">
+              <span class="hide-on-med-and-down"><img src="media/images/icons/seo-and-web.svg" width="30" id="appicon" style="vertical-align: middle;margin-bottom:10px;margin-right:10px;"></span>
+              <span id="header-large" style="font-weight:300;font-size:1.3rem;">BigPP</span>
+            </a>
+            
+            
+            <ul id="nav-mobile" class="hide-on-med-and-down right"><li><a href="/">Home</a></li><li><a href="/blogshow" aria-current="page">BlogShoW</a></li>
+            <li><a href="https://discord.gg/2pdpE4">CodersSea</a></li>
+            <li><a href="/logout">Log out</a></li>
+            <li><a href="/makeppbig">Make your PP big</a></li>
+            
+            {% else %}
+            <a href="/" class="waves-effect waves-light">
+              <span class="hide-on-med-and-down"><img src="media/images/icons/lightbulb.svg" width="30" id="appicon" style="vertical-align: middle;margin-bottom:10px;margin-right:10px;"></span>
+              <span id="header-large" style="font-weight:300;font-size:1.3rem;">BigPP</span>
+            </a>
+            
+            <ul id="nav-mobile" class="hide-on-med-and-down right"><li><a href="/" aria-current="page">Home</a></li>
+            <li><a href="/register">Register</a></li>
+            <li><a href="/login">Log in</a></li>
+            <li><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/2pdpE4">CodersSea</a></li>
+            
+            {% endif %}
+          </ul>				
+          
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-links">
+      {% if user.is_authenticated %}   
+      <li><a href="/">Home</a></li>    
+      <li><a href="/blogshow" aria-current="page">BlogShoW</a></li>
+      <li><a href="https://discord.gg/2pdpE4">CodersSea</a></li>
+      <li><a href="/logout">Log out</a></li>
+      <li><a href="/makeppbig">Make your PP big</a></li>
+      
+      {% else %}
+      
+      <li><a href="/" aria-current="page">Home</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href="/login">Log in</a></li>
+      <li><a target="_blank" rel="noopener noreferrer" href="https://discord.gg/2pdpE4">CodersSea</a></li>
+      
+      {% endif %}
+    </ul>	
+    </ul>
+  </div>
+  

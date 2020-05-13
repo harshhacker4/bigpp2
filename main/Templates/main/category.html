@@ -1,0 +1,28 @@
+{% extends "main/header.html" %}
+{% block content %}
+<p></p>
+<p></p>
+<br>
+    
+    <div class="row">
+        {% for c in category %}
+        
+          <div class="col l8 s16 m8 ">
+              <div class="card-panel hoverable" style="height:360px; background-color:#FFFFFF;">
+                <div class="card-image">
+                  <img class="responsive-img" src="" style="width:200px">
+                </div>
+                <div class="card-content black-text">
+                  <br><span class="card-title"><strong>{{c.Ctitle}}</strong></span>
+                  <p style="color:black;">{{c.Cdetails|safe}}</p>
+                </div>
+                <div class="card-action right-align">
+                  <a href="{{c.Cslug}}" class="waves-effect waves-light btn" style="color:#000000; background-color:#FFD166" >View More</a>
+                  
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

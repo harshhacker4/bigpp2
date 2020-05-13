@@ -1,0 +1,25 @@
+{% extends "main/header.html" %}
+{% block content %}
+    
+<div class="row">
+    {% for pp in bigpp %}
+    <div class="col l6 s12 m6">
+        <div class="card-panel hoverable" style="height:320px; background-color:#FFFFFF;">
+            <div class="card-image">
+              <i class="large material-icons" style="font-size:1000%; color:{{pp.ppcolor}};">{{pp.ppicon}}</i>
+              <br>
+            </div>
+            <span class="card-title"><strong>{{pp.pptitle|safe}}</strong></span>
+            <div class="card-content">
+              <p>{{pp.ppdetails|safe}}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    <p class="center-align">
+    <a href="/membership" class="center waves-effect waves-light btn">Buy me a Coffee!</a>
+    </p>
+   * a coffee buy lasts for a Month, you've to renew it every month!
+</div>
+
+{% endblock %}

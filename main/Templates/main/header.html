@@ -1,0 +1,38 @@
+ <head>
+    <style>
+         .sidenav-overlay {
+      height: 0px;
+      width: 0px;}
+    </style>
+    {% load static %}
+    <link href= "{% static 'tinymce/css/prism.css' %}" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link href= "{% static 'main/css/materialize.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified JavaScript -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400' rel='stylesheet' type='text/css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+<body>
+   {% include "main/includes/navbar.html" %}<!--navbar -->
+
+      <div class="container">
+        {% block content %}<!--homepage-->
+        {% endblock %}
+      </div>
+
+      {% include "main/includes/messages.html" %} <!--messages -->
+    
+</body>
+{% include "main/includes/footer.html" %} <!--footer -->
+
+
+<script>
+ $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+</script>
+<script src="{% static 'tinymce/js/prism.js' %}"></script>
+<script>M.AutoInit();</script>
